@@ -97,7 +97,9 @@ function showPreview(source, mediaItems) {
     // Add the link (consisting of the thumbnail image and caption) to
     // container.
     $('#images-container').append(linkToFullImage);
-  });
+  });    // caption: function(instance, item) {
+    //   return $(this).find('figcaption').html();
+    // }
 };
 
 // Makes a backend request to display the queue of photos currently loaded into
@@ -132,16 +134,17 @@ $(document).ready(() => {
     selector: '[data-fancybox="gallery"]',
     loop: true,
     buttons: ['slideShow', 'fullScreen', 'close'],
+    arrows: true,
     image: {preload: true},
     transitionEffect: 'fade',
-    transitionDuration: 1000,
-    fullScreen: {autoStart: false},
+    transitionDuration: 3000,
+    fullScreen: {autoStart: true},
     // Automatically advance after 3s to next photo.
-    slideShow: {autoStart: true, speed: 3000},
+    slideShow: {autoStart: true, speed: 4000},
     // Display the contents figcaption element as the caption of an image
-    caption: function(instance, item) {
-      return $(this).find('figcaption').html();
-    }
+    // caption: function(instance, item) {
+    //   return $(this).find('figcaption').html();
+    // }
   });
 
   // Clicking the 'view fullscreen' button opens the gallery from the first
