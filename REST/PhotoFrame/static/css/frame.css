@@ -40,6 +40,18 @@ pre {
 
 /* Frame page */
 
+div.fancybox-progress {
+  display: none !important;
+}
+
+div.fancybox-slide--current {
+  padding:0 !important;
+}
+
+.mdl-list__item-secondary-action {
+  width: 456px;
+}
+
 .sample-content {
   padding: 2.5% 7.5%;
   margin: 0 auto;
